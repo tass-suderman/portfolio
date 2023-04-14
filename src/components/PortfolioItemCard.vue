@@ -5,7 +5,7 @@
         <b-button><b-btn :href="githubURL">{{titleString}}</b-btn></b-button>
       </b-card-header>
       <b-card-body>
-        <b-carousel>
+        <b-carousel img-height="500px" img-width="400px">
           <b-carousel-slide :img-src="imagePath" :key="imagePath" v-for="imagePath in imagePaths"/>
         </b-carousel>
       </b-card-body>
