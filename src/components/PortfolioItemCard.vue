@@ -2,15 +2,24 @@
   <b-list-group-item>
     <b-card>
       <b-card-header>
-        <b-button><b-btn :href="githubURL">{{titleString}}</b-btn></b-button>
+        <b-button class="w-100 h1" :href="githubURL">{{titleString}}</b-button>
       </b-card-header>
-      <b-card-body>
-        <b-carousel img-height="500px" img-width="400px">
-          <b-carousel-slide :img-src="imagePath" :key="imagePath" v-for="imagePath in imagePaths"/>
-        </b-carousel>
+      <b-card-body class="container-fluid">
+        <div class="row h-25">
+          <b-card-text v-if="!left" class="col-lg-6 col-md-8 col-sm-12">
+            <p class="h6 text-white">{{description}}</p>
+          </b-card-text>
+          <b-carousel class="border  col-lg-6 col-md-4 col-sm-12" img-height="500px" img-width="400px">
+            <b-carousel-slide class="w-100" :img-src="imagePath" img-height="500px" :key="imagePath" v-for="imagePath in imagePaths"/>
+          </b-carousel>
+          <b-card-text v-if="left" class="col-lg-6 col-md-8 col-sm-12">
+            <p class="h6 text-white">{{description}}</p>
+          </b-card-text>
+        </div>
       </b-card-body>
       <b-card-footer>
-        <b-card-text>{{description}}</b-card-text>
+        <p><b>Date Developed: </b>{{date}}</p>
+        <p><b>Languages / Frameworks Used: </b>{{languages}}</p>
       </b-card-footer>
     </b-card>
   </b-list-group-item>
@@ -28,5 +37,11 @@ export default class PortfolioItemCard extends Vue {
   @Prop() readonly imagePaths! : string[]
 
   @Prop() readonly description! : string
+
+  @Prop() readonly left!: boolean
+
+  @Prop() readonly date! : string
+
+  @Prop() readonly languages! : string
 }
 </script>
