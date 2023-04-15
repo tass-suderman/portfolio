@@ -54,6 +54,17 @@
                        languages="Java, Android Studio"
     />
 
+    <PortfolioItemCard title-string="JavaFX Space Invaders"
+                       github-u-r-l="https://github.com/tass-suderman/jfx-space-invaders"
+                       :description="['aaaaa']"
+                       :image-paths="['images/jfx-space-invaders/main-menu.png',
+                                      'images/jfx-space-invaders/enemy-wall.png',
+                                      'images/jfx-space-invaders/gameplay.png',
+                                      'images/jfx-space-invaders/cat-enemy.png']"
+                       date="April 2022"
+                       languages="Java, JavaFX"
+    />
+
   </div>
 </template>
 
