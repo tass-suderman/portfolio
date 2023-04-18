@@ -1,32 +1,38 @@
 <template>
   <div class="home container-lg">
 
-    <b-jumbotron style="background: url('images/command-creator/command-creator.png') no-repeat center center fixed; background-size:cover; color:white;">
+    <b-jumbotron style="background: url('images/me/banner.png') no-repeat center;  background-size:cover; color:white;">
       <div style="background-color: rgba(0,0,0,0.8);">
         <h1 class="m-3">Tass Suderman</h1>
         <h3 class="mx-5">Junior Full-Stack Developer</h3>
-        <p class="m-5">
-          I'm a full-stack developer who's passionate about building elegant software solutions.
-          While I may not have a lot of professional experience yet, I have spent the last few years expanding my knowledge base and honing my skills.
-          I have built up a solid skillset that allows me to efficiently take on any challenge that comes my way.
-          Whether the solution requires the use of frontend frameworks like React and Vue or backend technologies like Node.js and Java, I feel confident that I am up to the task.
-        </p>
-        <p class="m-5">
-          In this portfolio you'll see some of the projects I've had the most fun with over the years, and I'll share what I think makes them special.
-          In this portfolio, you'll find examples of my work that showcase my technical abilities, creativity, and attention to detail.
-          Whether you're looking for a developer to join your team or need a custom software solution for your business, I'm confident that you'll find something here that piques your interest.
-          So take a look around and let's see what we can build together!
-        </p>
+        <p class="mx-5 mt-3 mb-5">I want to make the world a little less complicated</p>
         <div class="d-flex flex-row flex-wrap">
           <ContactComponent destination-u-r-l="https://www.github.com/tass-suderman" title-string="GitHub" icon-component="github"/>
           <ContactComponent destination-u-r-l="https://www.linkedin.com/in/tass-suderman" title-string="LinkedIn" icon-component="linkedin"/>
           <ContactComponent destination-u-r-l="mailto://tasssuderman@gmail.com" title-string="Email" icon-component="envelope-fill"/>
           <ContactComponent destination-u-r-l="docs/tass-suderman-resume.pdf" title-string="Resume" icon-component="journal-text"/>
         </div>
+
+        <h6>Last edited on April 2023 by Tass Suderman</h6>
       </div>
 
     </b-jumbotron>
 
+    <PortfolioItemCard title-string="About Me"
+                       about-me="about-me"
+                       :description="[`
+          I am a full-stack developer who is passionate about building elegant software solutions.
+          While I may not have a lot of professional experience yet, I have spent the last few years expanding my knowledge base and honing my skills.
+          I have built up a solid skill-set that allows me to efficiently take on any challenge that comes my way.
+          Whether the solution requires the use of frontend frameworks like React and Vue or backend technologies like Node.js and Java, I feel confident that I am up to the task.`,
+                                      `In this portfolio you'll see some of the projects I've had the most fun with over the years, and I'll share what I think makes them special.
+          Whether you're looking for a developer to join your team or just want to take a look around at the cool studd I've made, I'm sure you'll find something interesting here.
+        ` ]"
+                       :image-paths="['images/me/chillin.png']"
+                       date="Agile Development, Database Management (SQL, Neo4J), Full-Stack Development"
+                       languages="Java, Javascript, Typescript, Swift, C, C#, Vue, React"
+                       challenges="I want to use my skills to better the world around me and to make life a little less complicated"
+    />
     <PortfolioItemCard title-string="Discord Bot Command Creator"
                        left="left"
                        github-u-r-l="https://github.com/tass-suderman/discord-bot-command-creator"
@@ -46,6 +52,7 @@
                        date="December 2022"
                        languages="TypeORM, VueJS, TypeScript, Express"
                        challenges="Had to do a lot of reading into Discord's API to optimize the required number of external calls."
+                       collaborators="Levi Krozser"
     />
 
     <PortfolioItemCard title-string="Swift BlackJack"
@@ -62,6 +69,9 @@
                        date="February 2023"
                        languages="Swift"
                        challenges="Complicated ASCII art. Limited resources for working in Swift"
+                       iframe-u-r-l="https://replit.com/@TassSuderman/Blackjack?embed=true"
+                       iframe-title="BlackJack"
+                       collaborators="Krishiv Soni"
     />
 
     <PortfolioItemCard title-string="Android Dodge Game"
