@@ -1,21 +1,32 @@
 <template>
-  <div class="home container-md">
+  <div class="home container-lg">
 
-    <b-jumbotron lead="Junior Full-Stack Developer" header="Tass Suderman">
-      <p>Tass here. I am a software developer and while I prefer to do backend webserver work but have been known to do full-stack development, mobile app development, UNIX scripting,
-        full software programs and pretty much anything else I need to do.</p>
-    </b-jumbotron>
-    <b-card title="About me:" img-src="images/command-creator/command-creator.png" class="mb-2">
-      <b-card-text>
-        Hello this is me with some text :)
-      </b-card-text>
-      <div class="d-flex justify-content-between flex-wrap">
-        <ContactComponent destination-u-r-l="https://www.github.com/tass-suderman" title-string="GitHub" icon-component="github"/>
-        <ContactComponent destination-u-r-l="https://www.linkedin.com/in/tass-suderman" title-string="LinkedIn" icon-component="linkedin"/>
-        <ContactComponent destination-u-r-l="mailto://tasssuderman@gmail.com" title-string="Email" icon-component="envelope-fill"/>
-        <ContactComponent destination-u-r-l="docs/tass-suderman-resume.pdf" title-string="Resume" icon-component="journal-text"/>
+    <b-jumbotron style="background: url('images/command-creator/command-creator.png') no-repeat center center fixed; background-size:cover; color:white;">
+      <div style="background-color: rgba(0,0,0,0.8);">
+        <h1 class="m-3">Tass Suderman</h1>
+        <h3 class="mx-5">Junior Full-Stack Developer</h3>
+        <p class="m-5">
+          I'm a full-stack developer who's passionate about building elegant software solutions.
+          While I may not have a lot of professional experience yet, I have spent the last few years expanding my knowledge base and honing my skills.
+          I have built up a solid skillset that allows me to efficiently take on any challenge that comes my way.
+          Whether the solution requires the use of frontend frameworks like React and Vue or backend technologies like Node.js and Java, I feel confident that I am up to the task.
+        </p>
+        <p class="m-5">
+          In this portfolio you'll see some of the projects I've had the most fun with over the years, and I'll share what I think makes them special.
+          In this portfolio, you'll find examples of my work that showcase my technical abilities, creativity, and attention to detail.
+          Whether you're looking for a developer to join your team or need a custom software solution for your business, I'm confident that you'll find something here that piques your interest.
+          So take a look around and let's see what we can build together!
+        </p>
+        <div class="d-flex flex-row flex-wrap">
+          <ContactComponent destination-u-r-l="https://www.github.com/tass-suderman" title-string="GitHub" icon-component="github"/>
+          <ContactComponent destination-u-r-l="https://www.linkedin.com/in/tass-suderman" title-string="LinkedIn" icon-component="linkedin"/>
+          <ContactComponent destination-u-r-l="mailto://tasssuderman@gmail.com" title-string="Email" icon-component="envelope-fill"/>
+          <ContactComponent destination-u-r-l="docs/tass-suderman-resume.pdf" title-string="Resume" icon-component="journal-text"/>
+        </div>
       </div>
-    </b-card>
+
+    </b-jumbotron>
+
     <PortfolioItemCard title-string="Discord Bot Command Creator"
                        left="left"
                        github-u-r-l="https://github.com/tass-suderman/discord-bot-command-creator"
@@ -86,7 +97,7 @@
                                       'images/jfx-space-invaders/cat-enemy.png']"
                        date="March 2022"
                        languages="Java, JavaFX"
-                       challenges="Overlapping sprites caused unpredictable behaviour. To combat this, I had to build enemy rhythms which never ressult in an overlap."
+                       challenges="Overlapping sprites caused unpredictable behaviour. To combat this, I had to build enemy rhythms which never result in an overlap."
     />
   </div>
 </template>

@@ -10,8 +10,8 @@
           <b-card-text v-if="!left" class="bv-d-sm-down-none my-auto h-100 m-2 p-2 col-lg-5 col-md-6">
             <p v-for="paragraph in description" :key="paragraph" class="text-white">{{paragraph}}</p>
           </b-card-text>
-          <b-carousel controls fade class="col-lg-6 col-md-5 col-sm-12" img-height="500px" img-width="400px">
-            <b-carousel-slide class="w-100" :img-src="imagePath" img-height="500px" :key="imagePath" v-for="imagePath in imagePaths"/>
+          <b-carousel fade class="col-lg-6 col-md-5 col-sm-12" >
+            <b-carousel-slide class="w-100 card border-primary" :img-src="imagePath" :key="imagePath" v-for="imagePath in imagePaths"/>
           </b-carousel>
           <b-card-text v-if="!left" class="d-md-none d-sm-block h-100 m-2 p-2 col-sm-11">
             <p v-for="paragraph in description" :key="paragraph" class="text-white">{{paragraph}}</p>

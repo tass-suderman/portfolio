@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import { BootstrapVue, IconsPlugin } from 'bootstrap-vue';
 import VueRouter, { RouteConfig } from 'vue-router';
-import 'bootswatch/dist/cyborg/bootstrap.css';
+import 'bootswatch/dist/vapor/bootstrap.css';
 import 'bootstrap-vue/dist/bootstrap-vue.css';
 import HomeView from '@/views/HomeView.vue';
 import App from './App.vue';
