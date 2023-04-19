@@ -13,7 +13,7 @@
             <b-card-text v-if="!left" class="bv-d-sm-down-none my-auto m-2 p-2 col-lg-5 col-md-6">
               <p v-for="paragraph in description" :key="paragraph" class="text-white">{{paragraph}}</p>
             </b-card-text>
-            <iframe class="d-xl-block d-none bv-d-lg-down-none col-xl-6" :title="iframeTitle" :src="iframeURL" height="800px" width="600px" />
+            <iframe loading="lazy" allowfullscreen class="d-xl-block d-none bv-d-lg-down-none col-xl-6" :title="iframeTitle" :src="iframeURL" height="800px" width="600px" />
             <!--            Carousels are set to appear if screen size drops below XL -> this resolves errors with ASCII rendering in the BlackJack entry -->
             <b-carousel fade class="d-xl-none col-lg-6 col-md-5 col-sm-12" >
               <b-carousel-slide class="w-100 card border-primary" :img-src="imagePath" :key="imagePath" v-for="imagePath in imagePaths"/>
