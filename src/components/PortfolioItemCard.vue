@@ -2,9 +2,9 @@
   <b-list-group-item>
     <b-card>
       <!--      Button and title -->
-      <b-card-header>
+      <b-card-header v-if="!aboutMe">
         <!--        <b-button v-if="aboutMe" pill disabled style="opacity: 1.0;" variant="info" class="w-100 p-4 m-0 h1" size="lg">{{titleString}}</b-button>-->
-        <b-button v-if="!aboutMe" class="w-100 p-4 m-0 h1" size="lg" :href="githubURL">{{titleString}}</b-button>
+        <b-button class="w-100 p-4 m-0 h1" size="lg" :href="githubURL">{{titleString}}</b-button>
       </b-card-header>
       <b-card-body class="container-fluid">
         <div class="row h-25">
