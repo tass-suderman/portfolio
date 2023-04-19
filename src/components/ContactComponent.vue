@@ -1,5 +1,5 @@
 <template>
-  <div class="p-3 col-sm-12 col-md-6 col-lg-4, col-xl-3">
+  <div class="p-3 col-sm-12 col-12 col-md-6 col-lg-4, col-xl-3">
     <b-button pill class="w-100 p-3" :href="destinationURL"><b-icon :icon="iconComponent"/> {{titleString}}</b-button>
   </div>
 </template>
