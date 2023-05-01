@@ -73,6 +73,9 @@
                        challenges="Complicated ASCII art. Limited resources for working in Swift"
                        iframe-u-r-l="https://replit.com/@TassSuderman/Blackjack?embed=true"
                        iframe-title="BlackJack"
+                       iframe-height="800px"
+                       iframe-modal-size="lg"
+                       iframe-width="600px"
                        collaborators="Krishiv Soni"
     />
 
@@ -113,6 +116,13 @@
                        date="March 2022"
                        languages="Java, JavaFX"
                        challenges="Overlapping sprites caused unpredictable behaviour. To combat this, I had to build enemy rhythms which never result in an overlap."
+                       iframe-u-r-l="https://replit.com/@TassSuderman/SpaceInvadersDemo?embed=true"
+                       iframe-title="JavaFX Space Invaders: Lite Edition"
+                       iframe-note="*Note: This version is stripped down quite a bit in terms of graphics and performance in order to have it run reliably on web browsers"
+                       iframe-height="800px"
+                       iframe-width="400px"
+                       iframe-modal-size="md"
+                       external-link="https://github.com/tass-suderman/jfx-space-invaders-lite-edition"
     />
   </div>
 </template>
