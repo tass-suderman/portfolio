@@ -13,7 +13,7 @@
           <ContactComponent destination-u-r-l="docs/tass-suderman-resume.pdf" title-string="Resume" icon-component="journal-text"/>
         </div>
 
-        <h6>Last edited on April 19th, 2023 by Tass Suderman</h6>
+        <h6>Last edited on May 1st, 2023 by Tass Suderman</h6>
       </div>
 
     </b-jumbotron>
