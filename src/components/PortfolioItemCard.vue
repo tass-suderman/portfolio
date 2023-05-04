@@ -3,7 +3,7 @@
     <b-card>
       <!--      Button and title -->
       <b-card-header v-if="!aboutMe">
-        <b-button class="w-100 p-4 m-0 h1" size="lg" :href="githubURL">{{titleString}}</b-button>
+        <b-button target="_blank" class="w-100 p-4 m-0 h1" size="lg" :href="githubURL">{{titleString}}</b-button>
       </b-card-header>
       <b-card-body class="container-fluid">
         <div class="row h-25">
@@ -34,7 +34,7 @@
         <p><b v-if="aboutMe">My Mission Statement: </b><b v-else>Biggest Challenges: </b>{{challenges}}</p>
         <p>
           <b-button class="bv-d-md-down-none" v-b-modal="iframeTitle" v-if="iframeURL" size="xl" variant="success">Preview Now</b-button>
-          <b-button class="bv-d-md-down-none" :href="externalLink" v-else-if="externalLink" size="xl" variant="info">Preview Now</b-button>
+          <b-button class="bv-d-md-down-none" target="_blank" :href="externalLink" v-else-if="externalLink" size="xl" variant="info">Preview Now</b-button>
         </p>
       </b-card-footer>
     </b-card>
@@ -45,7 +45,7 @@
       <p>{{iframeNote}}</p>
       <p class="d-flex flex-row justify-content-between">
         <b-button ontext-variant="info" @click="$bvModal.hide(iframeTitle)"><b-icon-arrow-left-circle-fill/> Return to Portfolio</b-button>
-        <b-button variant="info" v-if="externalLink" :href="externalLink">Visit This Version's Repo <b-icon-github/></b-button>
+        <b-button variant="info" v-if="externalLink" target="_blank" :href="externalLink">Visit This Version's Repo <b-icon-github/></b-button>
       </p>
     </b-modal>
   </b-list-group-item>
@@ -56,38 +56,56 @@ import { Prop, Component, Vue } from 'vue-property-decorator';
 
 @Component({})
 export default class PortfolioItemCard extends Vue {
+  // Title of portfolio item
   @Prop() readonly titleString!: string
 
+  // Link to portfolio item repository
   @Prop() readonly githubURL!: string
 
+  // Link to paths of screenshots of the portfolio item
   @Prop() readonly imagePaths!: string[]
 
+  // Description of portfolio item; each string is a paragraph
   @Prop() readonly description!: string[]
 
+  // Whether to place the images on the left side
   @Prop() readonly left!: boolean
 
+  // Dates the item was worked on
   @Prop() readonly date!: string
 
+  // Languages and frameworks used for the portfolio item
   @Prop() readonly languages!: string
 
+  // Big challenges in the portfolio item
   @Prop() readonly challenges!: string
 
-  @Prop() readonly iframeURL!: string
-
-  @Prop() readonly iframeTitle!: string
-
-  @Prop() readonly iframeNote!: string
-
-  @Prop() readonly iframeWidth!: string
-
-  @Prop() readonly iframeHeight!: string
-
-  @Prop() readonly iframeModalSize!: string
-
-  @Prop() readonly aboutMe!: boolean
-
+  // List of fellow collaborators on this project
   @Prop() readonly collaborators!: string
 
+  // URL of an iFrame to be used to demonstrate the item
+  @Prop() readonly iframeURL!: string
+
+  // Title of iFrame window in previews
+  @Prop() readonly iframeTitle!: string
+
+  // Note to place below iFrame for a brief description
+  @Prop() readonly iframeNote!: string
+
+  // Width of iFrame
+  @Prop() readonly iframeWidth!: string
+
+  // Height of iFrame
+  @Prop() readonly iframeHeight!: string
+
+  // Size of iFrame Modal
+  @Prop() readonly iframeModalSize!: string
+
+  // Set to true if this is a non-item, and is instead an about me section
+  @Prop() readonly aboutMe!: boolean
+
+  // External link --> if iFrame provided, links to the iFrame version's repo
+  // If no iFrame provided, links to an external site
   @Prop() readonly externalLink!: string
 }
 

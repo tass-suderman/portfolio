@@ -13,7 +13,7 @@
           <ContactComponent destination-u-r-l="docs/tass-suderman-resume.pdf" title-string="Resume" icon-component="journal-text"/>
         </div>
 
-        <h6>Last edited on May 1st, 2023 by Tass Suderman</h6>
+        <h6>Last edited on May 4th, 2023 by Tass Suderman</h6>
       </div>
 
     </b-jumbotron>
@@ -55,6 +55,7 @@
                        languages="TypeORM, VueJS, TypeScript, Express"
                        challenges="Had to do a lot of reading into Discord's API to optimize the required number of external calls."
                        collaborators="Levi Krozser"
+                       external-link="https://discord-command-client.tass-suderman.ca"
     />
 
     <PortfolioItemCard title-string="Swift BlackJack"
