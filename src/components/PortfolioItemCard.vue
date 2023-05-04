@@ -42,7 +42,7 @@
       <div class="text-center">
         <iframe loading="lazy" allowfullscreen :title="iframeTitle" :src="iframeURL" :height="iframeHeight" :width="iframeWidth" />
       </div>
-      <p>{{iframeNote}}</p>
+      <p v-for="para in iframeNote" :key="para">{{para}}</p>
       <p class="d-flex flex-row justify-content-between">
         <b-button ontext-variant="info" @click="$bvModal.hide(iframeTitle)"><b-icon-arrow-left-circle-fill/> Return to Portfolio</b-button>
         <b-button variant="info" v-if="externalLink" target="_blank" :href="externalLink">Visit This Version's Repo <b-icon-github/></b-button>
@@ -90,7 +90,7 @@ export default class PortfolioItemCard extends Vue {
   @Prop() readonly iframeTitle!: string
 
   // Note to place below iFrame for a brief description
-  @Prop() readonly iframeNote!: string
+  @Prop() readonly iframeNote!: string[]
 
   // Width of iFrame
   @Prop() readonly iframeWidth!: string

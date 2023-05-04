@@ -119,7 +119,9 @@
                        challenges="Overlapping sprites caused unpredictable behaviour. To combat this, I had to build enemy rhythms which never result in an overlap."
                        iframe-u-r-l="https://replit.com/@TassSuderman/SpaceInvadersDemo?embed=true"
                        iframe-title="JavaFX Space Invaders: Lite Edition"
-                       iframe-note="*Note: This version is stripped down quite a bit in terms of graphics and performance in order to have it run reliably on web browsers"
+                       :iframe-note="['*Note: this version is stripped down quite a bit in terms of graphics and performance in order to have it run reliably on web browsers',
+                                      'Controls: ⇦ Move Left  | ⇨ Move Right',
+                                      '⇧ Fire Primary Weapon  | ⇩ Fire Secondary Weapon']"
                        iframe-height="800px"
                        iframe-width="400px"
                        iframe-modal-size="md"
