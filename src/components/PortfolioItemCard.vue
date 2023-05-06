@@ -33,8 +33,8 @@
         <p><b v-if="aboutMe">Languages / Frameworks: </b><b v-else>Languages / Frameworks Used: </b>{{languages}}</p>
         <p><b v-if="aboutMe">My Mission Statement: </b><b v-else>Biggest Challenges: </b>{{challenges}}</p>
         <p>
-          <b-button class="bv-d-md-down-none" v-b-modal="iframeTitle" v-if="iframeURL" size="xl" variant="success">Preview Now</b-button>
-          <b-button class="bv-d-md-down-none" target="_blank" :href="externalLink" v-else-if="externalLink" size="xl" variant="info">Preview Now</b-button>
+          <b-button class="bv-d-md-down-none" v-b-modal="iframeTitle" v-if="iframeURL" size="xl" variant="success">Preview Now ({{previewType}})</b-button>
+          <b-button class="bv-d-md-down-none" target="_blank" :href="externalLink" v-else-if="externalLink" size="xl" variant="info">Preview Now ({{previewType}})</b-button>
         </p>
       </b-card-footer>
     </b-card>
@@ -107,6 +107,9 @@ export default class PortfolioItemCard extends Vue {
   // External link --> if iFrame provided, links to the iFrame version's repo
   // If no iFrame provided, links to an external site
   @Prop() readonly externalLink!: string
+
+  // Preview type; makes it clear what each link does
+  @Prop() readonly previewType!: string
 }
 
 </script>

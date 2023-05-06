@@ -56,6 +56,7 @@
                        challenges="Had to do a lot of reading into Discord's API to optimize the required number of external calls."
                        collaborators="Levi Krozser"
                        external-link="https://discord-command-client.tass-suderman.ca"
+                       preview-type="Site"
     />
 
     <PortfolioItemCard title-string="Swift BlackJack"
@@ -78,6 +79,7 @@
                        iframe-modal-size="lg"
                        iframe-width="600px"
                        collaborators="Krishiv Soni"
+                       preview-type="Modal"
     />
 
     <PortfolioItemCard title-string="Android Dodge Game"
@@ -101,6 +103,7 @@
                        languages="Java, Android Studio"
                        challenges="Complicated algorithms and controller code."
                        external-link="https://github.com/tass-suderman/android-studio-dodge-game/raw/main/APK%20Output/dodge-game.apk"
+                       preview-type="Download"
     />
 
     <PortfolioItemCard title-string="JavaFX Space Invaders"
@@ -127,6 +130,7 @@
                        iframe-width="400px"
                        iframe-modal-size="md"
                        external-link="https://github.com/tass-suderman/jfx-space-invaders-lite-edition"
+                       preview-type="Modal"
     />
   </div>
 </template>
