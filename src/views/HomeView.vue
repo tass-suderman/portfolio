@@ -100,6 +100,7 @@
                        date="June 2022"
                        languages="Java, Android Studio"
                        challenges="Complicated algorithms and controller code."
+                       external-link="https://github.com/tass-suderman/android-studio-dodge-game/raw/main/APK%20Output/dodge-game.apk"
     />
 
     <PortfolioItemCard title-string="JavaFX Space Invaders"
